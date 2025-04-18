@@ -1,0 +1,1356 @@
+2025-03-31 11:29:11,007 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSalary Structure` MODIFY `total_deduction` decimal(21,9) not null default 0, MODIFY `hour_rate` decimal(21,9) not null default 0, MODIFY `leave_encashment_amount_per_day` decimal(21,9) not null default 0, MODIFY `net_pay` decimal(21,9) not null default 0, MODIFY `total_earning` decimal(21,9) not null default 0, MODIFY `max_benefits` decimal(21,9) not null default 0
+2025-03-31 11:29:11,018 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSalary Structure` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:11,128 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSalary Component Account` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:11,222 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSalary Slip Leave` MODIFY `available_leaves` decimal(21,9) not null default 0, MODIFY `expired_leaves` decimal(21,9) not null default 0, MODIFY `used_leaves` decimal(21,9) not null default 0, MODIFY `total_allocated_leaves` decimal(21,9) not null default 0, MODIFY `pending_leaves` decimal(21,9) not null default 0
+2025-03-31 11:29:11,232 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSalary Slip Leave` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:11,342 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Benefit Claim` MODIFY `claimed_amount` decimal(21,9) not null default 0, MODIFY `max_amount_eligible` decimal(21,9) not null default 0
+2025-03-31 11:29:11,352 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Benefit Claim` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:11,463 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Cost Center` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:11,678 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPayroll Period` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:11,833 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAdditional Salary` MODIFY `amount` decimal(21,9) not null default 0
+2025-03-31 11:29:11,844 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAdditional Salary` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:11,949 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Tax Exemption Sub Category` MODIFY `max_amount` decimal(21,9) not null default 0
+2025-03-31 11:29:11,959 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Tax Exemption Sub Category` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:12,077 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIncome Tax Slab` MODIFY `standard_tax_exemption_amount` decimal(21,9) not null default 0
+2025-03-31 11:29:12,096 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIncome Tax Slab` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:12,311 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSalary Slip` MODIFY `income_from_other_sources` decimal(21,9) not null default 0, MODIFY `income_tax_deducted_till_date` decimal(21,9) not null default 0, MODIFY `base_year_to_date` decimal(21,9) not null default 0, MODIFY `non_taxable_earnings` decimal(21,9) not null default 0, MODIFY `month_to_date` decimal(21,9) not null default 0, MODIFY `tax_exemption_declaration` decimal(21,9) not null default 0, MODIFY `deductions_before_tax_calculation` decimal(21,9) not null default 0, MODIFY `current_month_income_tax` decimal(21,9) not null default 0, MODIFY `gross_pay` decimal(21,9) not null default 0, MODIFY `ctc` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `future_income_tax_deductions` decimal(21,9) not null default 0, MODIFY `base_gross_pay` decimal(21,9) not null default 0, MODIFY `total_working_days` decimal(21,9) not null default 0, MODIFY `annual_taxable_amount` decimal(21,9) not null default 0, MODIFY `base_net_pay` decimal(21,9) not null default 0, MODIFY `hour_rate` decimal(21,9) not null default 0, MODIFY `total_income_tax` decimal(21,9) not null default 0, MODIFY `unmarked_days` decimal(21,9) not null default 0, MODIFY `leave_without_pay` decimal(21,9) not null default 0, MODIFY `base_hour_rate` decimal(21,9) not null default 0, MODIFY `gross_year_to_date` decimal(21,9) not null default 0, MODIFY `base_month_to_date` decimal(21,9) not null default 0, MODIFY `payment_days` decimal(21,9) not null default 0, MODIFY `total_deduction` decimal(21,9) not null default 0, MODIFY `year_to_date` decimal(21,9) not null default 0, MODIFY `rounded_total` decimal(21,9) not null default 0, MODIFY `base_gross_year_to_date` decimal(21,9) not null default 0, MODIFY `standard_tax_exemption_amount` decimal(21,9) not null default 0, MODIFY `total_working_hours` decimal(21,9) not null default 0, MODIFY `base_total_deduction` decimal(21,9) not null default 0, MODIFY `net_pay` decimal(21,9) not null default 0, MODIFY `total_earnings` decimal(21,9) not null default 0, MODIFY `absent_days` decimal(21,9) not null default 0
+2025-03-31 11:29:12,336 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSalary Slip` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:12,478 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Incentive` MODIFY `incentive_amount` decimal(21,9) not null default 0
+2025-03-31 11:29:12,488 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Incentive` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:12,631 WARNING database DDL Query made to DB:
+ALTER TABLE `tabRetention Bonus` MODIFY `bonus_amount` decimal(21,9) not null default 0
+2025-03-31 11:29:12,642 WARNING database DDL Query made to DB:
+ALTER TABLE `tabRetention Bonus` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:12,747 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGratuity Rule Slab` MODIFY `fraction_of_applicable_earnings` decimal(21,9) not null default 0
+2025-03-31 11:29:12,773 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGratuity Rule Slab` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:12,904 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGratuity` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:13,001 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Tax Exemption Proof Submission Detail` MODIFY `max_amount` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0
+2025-03-31 11:29:13,012 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Tax Exemption Proof Submission Detail` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:13,125 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Tax Exemption Declaration` MODIFY `total_declared_amount` decimal(21,9) not null default 0, MODIFY `annual_hra_exemption` decimal(21,9) not null default 0, MODIFY `monthly_house_rent` decimal(21,9) not null default 0, MODIFY `monthly_hra_exemption` decimal(21,9) not null default 0, MODIFY `salary_structure_hra` decimal(21,9) not null default 0, MODIFY `total_exemption_amount` decimal(21,9) not null default 0
+2025-03-31 11:29:13,135 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Tax Exemption Declaration` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:13,247 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIncome Tax Slab Other Charges` MODIFY `max_taxable_income` decimal(21,9) not null default 0, MODIFY `percent` decimal(21,9) not null default 0, MODIFY `min_taxable_income` decimal(21,9) not null default 0
+2025-03-31 11:29:13,255 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIncome Tax Slab Other Charges` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:13,333 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSalary Slip Timesheet` MODIFY `working_hours` decimal(21,9) not null default 0
+2025-03-31 11:29:13,352 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSalary Slip Timesheet` ADD INDEX `creation`(`creation`)
+2025-03-31 11:29:13,463 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSalary Detail` MODIFY `additional_amount` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `tax_on_flexible_benefit` decimal(21,9) not null default 0, MODIFY `year_to_date` decimal(21,9) not null default 0, MODIFY `default_amount` decimal(21,9) not null default 0, MODIFY `tax_on_additional_salary` decimal(21,9) not null default 0
+2025-03-31 11:29:13,473 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSalary Detail` ADD INDEX `creation`(`creation`)
+2025-03-31 11:34:33,881 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 11:34:34,665 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 11:34:35,477 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 11:42:45,855 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 11:45:15,005 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 11:45:54,121 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 11:52:45,754 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 11:52:46,608 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 11:52:47,485 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 12:02:15,593 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 12:02:16,295 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 12:02:17,020 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 12:11:38,114 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 12:11:38,812 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 12:11:39,539 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 12:13:41,865 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 12:13:42,564 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 12:13:43,272 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 12:19:39,821 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 12:19:40,604 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 12:19:41,396 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 12:27:04,260 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 12:27:05,001 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 12:27:05,703 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 12:32:39,510 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 12:32:40,246 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 12:32:40,959 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 12:39:46,798 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 12:39:47,542 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 12:39:48,256 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 12:42:31,832 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 12:42:32,575 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 12:42:33,314 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 12:43:00,541 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 12:43:01,392 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 12:43:02,390 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 12:48:32,027 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 12:48:32,753 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 12:48:33,497 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 13:12:31,090 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 13:12:31,812 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 13:12:32,503 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 13:28:14,002 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 13:28:14,896 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 13:28:15,842 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 13:29:14,574 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 13:29:15,279 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 13:29:15,984 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 13:30:00,392 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 13:30:01,099 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 13:30:01,784 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 13:32:28,824 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 13:32:29,552 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 13:32:30,270 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 13:33:08,662 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 13:33:09,334 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 13:33:10,060 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 13:34:06,935 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 13:34:07,635 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 13:34:08,327 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 14:39:10,662 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 14:39:11,374 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 14:39:12,073 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 15:33:11,613 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 15:33:12,367 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 15:33:13,111 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 18:02:43,455 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 18:02:44,584 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 18:02:45,904 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 18:02:56,604 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 18:02:57,551 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 18:02:58,637 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 18:05:39,253 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 18:05:39,770 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDocField` MODIFY `link_filters` json
+2025-03-31 18:05:40,454 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCustom Field` MODIFY `link_filters` json
+2025-03-31 18:05:40,663 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWeb Form` MODIFY `condition_json` json
+2025-03-31 18:05:41,925 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD INDEX `last_active_index`(`last_active`)
+2025-03-31 18:05:42,417 WARNING database DDL Query made to DB:
+ALTER TABLE `tabScheduler Event` ADD INDEX `creation`(`creation`)
+2025-03-31 18:05:42,633 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSMS Parameter` MODIFY `value` varchar(255)
+2025-03-31 18:05:43,459 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCustomize Form Field` MODIFY `link_filters` json
+2025-03-31 18:05:43,860 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEvent` MODIFY `google_calendar_event_id` varchar(320)
+2025-03-31 18:05:44,548 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWebhook Request Log` MODIFY `url` text
+2025-03-31 18:05:44,656 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 18:05:45,037 WARNING database DDL Query made to DB:
+ALTER TABLE `tabProcess Payment Reconciliation Log Allocations` MODIFY `unreconciled_amount` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `difference_amount` decimal(21,9) not null default 0, MODIFY `exchange_rate` decimal(21,9) not null default 0, MODIFY `allocated_amount` decimal(21,9) not null default 0
+2025-03-31 18:05:45,136 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTax Withheld Vouchers` MODIFY `taxable_amount` decimal(21,9) not null default 0
+2025-03-31 18:05:45,291 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGL Entry` MODIFY `credit` decimal(21,9) not null default 0, MODIFY `credit_in_account_currency` decimal(21,9) not null default 0, MODIFY `credit_in_transaction_currency` decimal(21,9) not null default 0, MODIFY `debit_in_transaction_currency` decimal(21,9) not null default 0, MODIFY `transaction_exchange_rate` decimal(21,9) not null default 0, MODIFY `debit_in_account_currency` decimal(21,9) not null default 0, MODIFY `debit` decimal(21,9) not null default 0
+2025-03-31 18:05:45,753 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPOS Invoice` MODIFY `total` decimal(21,9) not null default 0, MODIFY `base_rounding_adjustment` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `total_net_weight` decimal(21,9) not null default 0, MODIFY `base_discount_amount` decimal(21,9) not null default 0, MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `base_grand_total` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `rounding_adjustment` decimal(21,9) not null default 0, MODIFY `base_change_amount` decimal(21,9) not null default 0, MODIFY `change_amount` decimal(21,9) not null default 0, MODIFY `additional_discount_percentage` decimal(21,9) not null default 0, MODIFY `total_commission` decimal(21,9) not null default 0, MODIFY `conversion_rate` decimal(21,9) not null default 0, MODIFY `base_write_off_amount` decimal(21,9) not null default 0, MODIFY `commission_rate` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `amount_eligible_for_commission` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `loyalty_amount` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0, MODIFY `paid_amount` decimal(21,9) not null default 0, MODIFY `total_advance` decimal(21,9) not null default 0, MODIFY `write_off_amount` decimal(21,9) not null default 0, MODIFY `base_paid_amount` decimal(21,9) not null default 0, MODIFY `base_net_total` decimal(21,9) not null default 0, MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `rounded_total` decimal(21,9) not null default 0, MODIFY `outstanding_amount` decimal(21,9) not null default 0, MODIFY `plc_conversion_rate` decimal(21,9) not null default 0
+2025-03-31 18:05:46,425 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAdvance Taxes and Charges` MODIFY `tax_amount` decimal(21,9) not null default 0, MODIFY `base_tax_amount` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0, MODIFY `allocated_amount` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0
+2025-03-31 18:05:46,536 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPayment Entry Reference` MODIFY `total_amount` decimal(21,9) not null default 0, MODIFY `exchange_rate` decimal(21,9) not null default 0, MODIFY `exchange_gain_loss` decimal(21,9) not null default 0, MODIFY `payment_term_outstanding` decimal(21,9) not null default 0, MODIFY `outstanding_amount` decimal(21,9) not null default 0, MODIFY `allocated_amount` decimal(21,9) not null default 0
+2025-03-31 18:05:46,637 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPurchase Invoice Advance` MODIFY `advance_amount` decimal(21,9) not null default 0, MODIFY `allocated_amount` decimal(21,9) not null default 0, MODIFY `ref_exchange_rate` decimal(21,9) not null default 0, MODIFY `exchange_gain_loss` decimal(21,9) not null default 0
+2025-03-31 18:05:47,044 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSales Invoice Item` MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `base_net_rate` decimal(21,9) not null default 0, MODIFY `stock_uom_rate` decimal(21,9) not null default 0, MODIFY `base_net_amount` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `total_weight` decimal(21,9) not null default 0, MODIFY `net_amount` decimal(21,9) not null default 0, MODIFY `rate_with_margin` decimal(21,9) not null default 0, MODIFY `incoming_rate` decimal(21,9) not null default 0, MODIFY `base_amount` decimal(21,9) not null default 0, MODIFY `base_rate_with_margin` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0, MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `base_price_list_rate` decimal(21,9) not null default 0, MODIFY `delivered_qty` decimal(21,9) not null default 0, MODIFY `net_rate` decimal(21,9) not null default 0, MODIFY `discount_percentage` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `actual_batch_qty` decimal(21,9) not null default 0, MODIFY `base_rate` decimal(21,9) not null default 0, MODIFY `company_total_stock` decimal(21,9) not null default 0, MODIFY `price_list_rate` decimal(21,9) not null default 0, MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `margin_rate_or_amount` decimal(21,9) not null default 0
+2025-03-31 18:05:47,060 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSales Invoice Item` ADD INDEX `creation`(`creation`)
+2025-03-31 18:05:47,183 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAccounting Dimension` ADD INDEX `document_type_index`(`document_type`)
+2025-03-31 18:05:47,374 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDunning` MODIFY `total_outstanding` decimal(21,9) not null default 0, MODIFY `conversion_rate` decimal(21,9) not null default 0
+2025-03-31 18:05:47,461 WARNING database DDL Query made to DB:
+ALTER TABLE `tabProcess Statement Of Accounts CC` ADD INDEX `creation`(`creation`)
+2025-03-31 18:05:47,654 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPayment Request` MODIFY `outstanding_amount` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0
+2025-03-31 18:05:47,978 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAccount` MODIFY `tax_rate` decimal(21,9) not null default 0
+2025-03-31 18:05:48,267 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPurchase Invoice Item` MODIFY `margin_rate_or_amount` decimal(21,9) not null default 0, MODIFY `net_amount` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `total_weight` decimal(21,9) not null default 0, MODIFY `stock_uom_rate` decimal(21,9) not null default 0, MODIFY `base_amount` decimal(21,9) not null default 0, MODIFY `rejected_qty` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0, MODIFY `received_qty` decimal(21,9) not null default 0, MODIFY `landed_cost_voucher_amount` decimal(21,9) not null default 0, MODIFY `discount_percentage` decimal(21,9) not null default 0, MODIFY `net_rate` decimal(21,9) not null default 0, MODIFY `sales_incoming_rate` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `base_rate_with_margin` decimal(21,9) not null default 0, MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `item_tax_amount` decimal(21,9) not null default 0, MODIFY `rm_supp_cost` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `rate_with_margin` decimal(21,9) not null default 0, MODIFY `price_list_rate` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `base_net_rate` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `base_net_amount` decimal(21,9) not null default 0, MODIFY `base_price_list_rate` decimal(21,9) not null default 0, MODIFY `base_rate` decimal(21,9) not null default 0
+2025-03-31 18:05:48,669 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPurchase Invoice` MODIFY `rounded_total` decimal(21,9) not null default 0, MODIFY `base_rounding_adjustment` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `total_net_weight` decimal(21,9) not null default 0, MODIFY `base_grand_total` decimal(21,9) not null default 0, MODIFY `write_off_amount` decimal(21,9) not null default 0, MODIFY `base_net_total` decimal(21,9) not null default 0, MODIFY `base_tax_withholding_net_total` decimal(21,9) not null default 0, MODIFY `rounding_adjustment` decimal(21,9) not null default 0, MODIFY `base_discount_amount` decimal(21,9) not null default 0, MODIFY `taxes_and_charges_added` decimal(21,9) not null default 0, MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `additional_discount_percentage` decimal(21,9) not null default 0, MODIFY `base_paid_amount` decimal(21,9) not null default 0, MODIFY `base_write_off_amount` decimal(21,9) not null default 0, MODIFY `total_advance` decimal(21,9) not null default 0, MODIFY `base_taxes_and_charges_deducted` decimal(21,9) not null default 0, MODIFY `taxes_and_charges_deducted` decimal(21,9) not null default 0, MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `plc_conversion_rate` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0, MODIFY `paid_amount` decimal(21,9) not null default 0, MODIFY `outstanding_amount` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `conversion_rate` decimal(21,9) not null default 0, MODIFY `per_received` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0, MODIFY `base_taxes_and_charges_added` decimal(21,9) not null default 0
+2025-03-31 18:05:49,159 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSales Invoice` MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `base_paid_amount` decimal(21,9) not null default 0, MODIFY `change_amount` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `total_billing_hours` decimal(21,9) not null default 0, MODIFY `amount_eligible_for_commission` decimal(21,9) not null default 0, MODIFY `rounding_adjustment` decimal(21,9) not null default 0, MODIFY `plc_conversion_rate` decimal(21,9) not null default 0, MODIFY `rounded_total` decimal(21,9) not null default 0, MODIFY `total_advance` decimal(21,9) not null default 0, MODIFY `base_net_total` decimal(21,9) not null default 0, MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `total_commission` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0, MODIFY `paid_amount` decimal(21,9) not null default 0, MODIFY `base_discount_amount` decimal(21,9) not null default 0, MODIFY `additional_discount_percentage` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0, MODIFY `loyalty_amount` decimal(21,9) not null default 0, MODIFY `base_rounding_adjustment` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `base_change_amount` decimal(21,9) not null default 0, MODIFY `conversion_rate` decimal(21,9) not null default 0, MODIFY `total_net_weight` decimal(21,9) not null default 0, MODIFY `base_write_off_amount` decimal(21,9) not null default 0, MODIFY `commission_rate` decimal(21,9) not null default 0, MODIFY `base_grand_total` decimal(21,9) not null default 0, MODIFY `write_off_amount` decimal(21,9) not null default 0, MODIFY `outstanding_amount` decimal(21,9) not null default 0
+2025-03-31 18:05:49,172 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSales Invoice` ADD INDEX `project_index`(`project`)
+2025-03-31 18:05:49,487 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPayment Entry` MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `paid_from_account_balance` decimal(21,9) not null default 0, MODIFY `party_balance` decimal(21,9) not null default 0, MODIFY `paid_amount_after_tax` decimal(21,9) not null default 0, MODIFY `difference_amount` decimal(21,9) not null default 0, MODIFY `base_paid_amount_after_tax` decimal(21,9) not null default 0, MODIFY `total_allocated_amount` decimal(21,9) not null default 0, MODIFY `base_received_amount_after_tax` decimal(21,9) not null default 0, MODIFY `base_total_allocated_amount` decimal(21,9) not null default 0, MODIFY `unallocated_amount` decimal(21,9) not null default 0, MODIFY `received_amount` decimal(21,9) not null default 0, MODIFY `paid_to_account_balance` decimal(21,9) not null default 0, MODIFY `base_paid_amount` decimal(21,9) not null default 0, MODIFY `received_amount_after_tax` decimal(21,9) not null default 0, MODIFY `target_exchange_rate` decimal(21,9) not null default 0, MODIFY `paid_amount` decimal(21,9) not null default 0, MODIFY `source_exchange_rate` decimal(21,9) not null default 0, MODIFY `base_received_amount` decimal(21,9) not null default 0, MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0
+2025-03-31 18:05:49,609 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPayment Schedule` MODIFY `base_payment_amount` decimal(21,9) not null default 0, MODIFY `payment_amount` decimal(21,9) not null default 0, MODIFY `invoice_portion` decimal(21,9) not null default 0, MODIFY `paid_amount` decimal(21,9) not null default 0, MODIFY `outstanding` decimal(21,9) not null default 0, MODIFY `base_outstanding` decimal(21,9) not null default 0, MODIFY `discount` decimal(21,9) not null default 0, MODIFY `base_paid_amount` decimal(21,9) not null default 0
+2025-03-31 18:05:49,709 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSales Invoice Advance` MODIFY `allocated_amount` decimal(21,9) not null default 0, MODIFY `exchange_gain_loss` decimal(21,9) not null default 0, MODIFY `advance_amount` decimal(21,9) not null default 0, MODIFY `ref_exchange_rate` decimal(21,9) not null default 0
+2025-03-31 18:05:49,804 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPayment Entry Deduction` MODIFY `amount` decimal(21,9) not null default 0
+2025-03-31 18:05:50,049 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPricing Rule` MODIFY `max_qty` decimal(21,9) not null default 0, MODIFY `recurse_for` decimal(21,9) not null default 0, MODIFY `discount_percentage` decimal(21,9) not null default 0, MODIFY `free_item_rate` decimal(21,9) not null default 0, MODIFY `min_qty` decimal(21,9) not null default 0, MODIFY `threshold_percentage` decimal(21,9) not null default 0
+2025-03-31 18:05:50,169 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPOS Closing Entry Taxes` MODIFY `amount` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0
+2025-03-31 18:05:50,604 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLead` MODIFY `annual_revenue` decimal(21,9) not null default 0
+2025-03-31 18:05:51,003 WARNING database DDL Query made to DB:
+ALTER TABLE `tabProspect` MODIFY `annual_revenue` decimal(21,9) not null default 0
+2025-03-31 18:05:51,015 WARNING database DDL Query made to DB:
+ALTER TABLE `tabProspect` ADD INDEX `creation`(`creation`)
+2025-03-31 18:05:51,306 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPurchase Order Item` MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `total_weight` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0, MODIFY `base_price_list_rate` decimal(21,9) not null default 0, MODIFY `blanket_order_rate` decimal(21,9) not null default 0, MODIFY `returned_qty` decimal(21,9) not null default 0, MODIFY `received_qty` decimal(21,9) not null default 0, MODIFY `rate_with_margin` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0, MODIFY `base_net_amount` decimal(21,9) not null default 0, MODIFY `subcontracted_quantity` decimal(21,9) not null default 0, MODIFY `margin_rate_or_amount` decimal(21,9) not null default 0, MODIFY `base_rate` decimal(21,9) not null default 0, MODIFY `net_amount` decimal(21,9) not null default 0, MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `price_list_rate` decimal(21,9) not null default 0, MODIFY `stock_uom_rate` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `billed_amt` decimal(21,9) not null default 0, MODIFY `discount_percentage` decimal(21,9) not null default 0, MODIFY `company_total_stock` decimal(21,9) not null default 0, MODIFY `base_net_rate` decimal(21,9) not null default 0, MODIFY `base_amount` decimal(21,9) not null default 0, MODIFY `last_purchase_rate` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `net_rate` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `base_rate_with_margin` decimal(21,9) not null default 0
+2025-03-31 18:05:51,785 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSales Order Item` MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `gross_profit` decimal(21,9) not null default 0, MODIFY `base_price_list_rate` decimal(21,9) not null default 0, MODIFY `base_amount` decimal(21,9) not null default 0, MODIFY `stock_uom_rate` decimal(21,9) not null default 0, MODIFY `work_order_qty` decimal(21,9) not null default 0, MODIFY `production_plan_qty` decimal(21,9) not null default 0, MODIFY `company_total_stock` decimal(21,9) not null default 0, MODIFY `price_list_rate` decimal(21,9) not null default 0, MODIFY `net_amount` decimal(21,9) not null default 0, MODIFY `returned_qty` decimal(21,9) not null default 0, MODIFY `billed_amt` decimal(21,9) not null default 0, MODIFY `produced_qty` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `delivered_qty` decimal(21,9) not null default 0, MODIFY `picked_qty` decimal(21,9) not null default 0, MODIFY `projected_qty` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `base_net_rate` decimal(21,9) not null default 0, MODIFY `net_rate` decimal(21,9) not null default 0, MODIFY `blanket_order_rate` decimal(21,9) not null default 0, MODIFY `planned_qty` decimal(21,9) not null default 0, MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `ordered_qty` decimal(21,9) not null default 0, MODIFY `discount_percentage` decimal(21,9) not null default 0, MODIFY `base_rate` decimal(21,9) not null default 0, MODIFY `base_net_amount` decimal(21,9) not null default 0, MODIFY `total_weight` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `margin_rate_or_amount` decimal(21,9) not null default 0, MODIFY `rate_with_margin` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `base_rate_with_margin` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0
+2025-03-31 18:05:51,981 WARNING database DDL Query made to DB:
+ALTER TABLE `tabQuotation Item` MODIFY `company_total_stock` decimal(21,9) not null default 0, MODIFY `total_weight` decimal(21,9) not null default 0, MODIFY `projected_qty` decimal(21,9) not null default 0, MODIFY `base_rate` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0, MODIFY `rate_with_margin` decimal(21,9) not null default 0, MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `base_rate_with_margin` decimal(21,9) not null default 0, MODIFY `margin_rate_or_amount` decimal(21,9) not null default 0, MODIFY `blanket_order_rate` decimal(21,9) not null default 0, MODIFY `base_price_list_rate` decimal(21,9) not null default 0, MODIFY `base_amount` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0, MODIFY `discount_percentage` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `net_rate` decimal(21,9) not null default 0, MODIFY `gross_profit` decimal(21,9) not null default 0, MODIFY `base_net_amount` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `stock_uom_rate` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `net_amount` decimal(21,9) not null default 0, MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `price_list_rate` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `base_net_rate` decimal(21,9) not null default 0
+2025-03-31 18:05:52,283 WARNING database DDL Query made to DB:
+ALTER TABLE `tabQuotation` MODIFY `additional_discount_percentage` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `plc_conversion_rate` decimal(21,9) not null default 0, MODIFY `base_net_total` decimal(21,9) not null default 0, MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0, MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `conversion_rate` decimal(21,9) not null default 0, MODIFY `rounding_adjustment` decimal(21,9) not null default 0, MODIFY `base_grand_total` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0, MODIFY `rounded_total` decimal(21,9) not null default 0, MODIFY `base_discount_amount` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `total_net_weight` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `base_rounding_adjustment` decimal(21,9) not null default 0
+2025-03-31 18:05:52,656 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSales Order` MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `per_delivered` decimal(21,9) not null default 0, MODIFY `conversion_rate` decimal(21,9) not null default 0, MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `total_net_weight` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `loyalty_amount` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `advance_paid` decimal(21,9) not null default 0, MODIFY `additional_discount_percentage` decimal(21,9) not null default 0, MODIFY `commission_rate` decimal(21,9) not null default 0, MODIFY `total_commission` decimal(21,9) not null default 0, MODIFY `plc_conversion_rate` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `base_net_total` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0, MODIFY `base_grand_total` decimal(21,9) not null default 0, MODIFY `base_rounding_adjustment` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0, MODIFY `per_picked` decimal(21,9) not null default 0, MODIFY `rounding_adjustment` decimal(21,9) not null default 0, MODIFY `amount_eligible_for_commission` decimal(21,9) not null default 0, MODIFY `base_discount_amount` decimal(21,9) not null default 0, MODIFY `per_billed` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `rounded_total` decimal(21,9) not null default 0
+2025-03-31 18:05:52,668 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSales Order` ADD INDEX `project_index`(`project`)
+2025-03-31 18:05:52,872 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 18:05:53,122 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCompany` MODIFY `monthly_sales_target` decimal(21,9) not null default 0, MODIFY `total_monthly_sales` decimal(21,9) not null default 0, MODIFY `credit_limit` decimal(21,9) not null default 0
+2025-03-31 18:05:53,467 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee` MODIFY `ctc` decimal(21,9) not null default 0
+2025-03-31 18:05:53,820 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Card` MODIFY `for_quantity` decimal(21,9) not null default 0, MODIFY `total_time_in_mins` decimal(21,9) not null default 0, MODIFY `process_loss_qty` decimal(21,9) not null default 0, MODIFY `hour_rate` decimal(21,9) not null default 0, MODIFY `time_required` decimal(21,9) not null default 0
+2025-03-31 18:05:53,984 WARNING database DDL Query made to DB:
+ALTER TABLE `tabBOM Creator Item` MODIFY `base_amount` decimal(21,9) not null default 0, MODIFY `base_rate` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0, MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0
+2025-03-31 18:05:54,645 WARNING database DDL Query made to DB:
+ALTER TABLE `tabQuality Inspection` MODIFY `sample_size` decimal(21,9) not null default 0
+2025-03-31 18:05:54,810 WARNING database DDL Query made to DB:
+ALTER TABLE `tabStock Ledger Entry` MODIFY `incoming_rate` decimal(21,9) not null default 0, MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `stock_value` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `qty_after_transaction` decimal(21,9) not null default 0, MODIFY `outgoing_rate` decimal(21,9) not null default 0, MODIFY `stock_value_difference` decimal(21,9) not null default 0
+2025-03-31 18:05:54,821 WARNING database DDL Query made to DB:
+ALTER TABLE `tabStock Ledger Entry` ADD INDEX `voucher_type_index`(`voucher_type`)
+2025-03-31 18:05:55,070 WARNING database DDL Query made to DB:
+ALTER TABLE `tabStock Reconciliation Item` MODIFY `amount` decimal(21,9) not null default 0, MODIFY `amount_difference` decimal(21,9) not null default 0, MODIFY `current_amount` decimal(21,9) not null default 0, MODIFY `current_valuation_rate` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0
+2025-03-31 18:05:55,404 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSerial No` MODIFY `purchase_rate` decimal(21,9) not null default 0
+2025-03-31 18:05:55,645 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDelivery Note Item` MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `base_net_rate` decimal(21,9) not null default 0, MODIFY `company_total_stock` decimal(21,9) not null default 0, MODIFY `incoming_rate` decimal(21,9) not null default 0, MODIFY `total_weight` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `rate_with_margin` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `received_qty` decimal(21,9) not null default 0, MODIFY `base_rate` decimal(21,9) not null default 0, MODIFY `price_list_rate` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `billed_amt` decimal(21,9) not null default 0, MODIFY `installed_qty` decimal(21,9) not null default 0, MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `base_price_list_rate` decimal(21,9) not null default 0, MODIFY `base_amount` decimal(21,9) not null default 0, MODIFY `base_net_amount` decimal(21,9) not null default 0, MODIFY `base_rate_with_margin` decimal(21,9) not null default 0, MODIFY `actual_batch_qty` decimal(21,9) not null default 0, MODIFY `net_rate` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0, MODIFY `discount_percentage` decimal(21,9) not null default 0, MODIFY `margin_rate_or_amount` decimal(21,9) not null default 0, MODIFY `stock_uom_rate` decimal(21,9) not null default 0, MODIFY `net_amount` decimal(21,9) not null default 0, MODIFY `returned_qty` decimal(21,9) not null default 0
+2025-03-31 18:05:55,813 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipment` MODIFY `pickup_to` time(6) default '17:00', MODIFY `value_of_goods` decimal(21,9) not null default 0, MODIFY `pickup_from` time(6) default '09:00', MODIFY `shipment_amount` decimal(21,9) not null default 0, MODIFY `total_weight` decimal(21,9) not null default 0
+2025-03-31 18:05:55,971 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPacked Item` MODIFY `rate` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0, MODIFY `incoming_rate` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `ordered_qty` decimal(21,9) not null default 0, MODIFY `picked_qty` decimal(21,9) not null default 0, MODIFY `projected_qty` decimal(21,9) not null default 0, MODIFY `actual_batch_qty` decimal(21,9) not null default 0
+2025-03-31 18:05:55,980 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPacked Item` ADD INDEX `parent_detail_docname_index`(`parent_detail_docname`)
+2025-03-31 18:05:56,241 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPurchase Receipt Item` MODIFY `rate_with_margin` decimal(21,9) not null default 0, MODIFY `base_net_rate` decimal(21,9) not null default 0, MODIFY `base_net_amount` decimal(21,9) not null default 0, MODIFY `margin_rate_or_amount` decimal(21,9) not null default 0, MODIFY `base_rate` decimal(21,9) not null default 0, MODIFY `stock_uom_rate` decimal(21,9) not null default 0, MODIFY `base_price_list_rate` decimal(21,9) not null default 0, MODIFY `net_rate` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `received_stock_qty` decimal(21,9) not null default 0, MODIFY `total_weight` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `base_amount` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0, MODIFY `discount_percentage` decimal(21,9) not null default 0, MODIFY `price_list_rate` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0, MODIFY `net_amount` decimal(21,9) not null default 0, MODIFY `rejected_qty` decimal(21,9) not null default 0, MODIFY `landed_cost_voucher_amount` decimal(21,9) not null default 0, MODIFY `base_rate_with_margin` decimal(21,9) not null default 0, MODIFY `item_tax_amount` decimal(21,9) not null default 0, MODIFY `billed_amt` decimal(21,9) not null default 0, MODIFY `sales_incoming_rate` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `rm_supp_cost` decimal(21,9) not null default 0, MODIFY `amount_difference_with_purchase_invoice` decimal(21,9) not null default 0, MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `returned_qty` decimal(21,9) not null default 0
+2025-03-31 18:05:56,436 WARNING database DDL Query made to DB:
+ALTER TABLE `tabStock Entry Detail` MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `additional_cost` decimal(21,9) not null default 0, MODIFY `basic_amount` decimal(21,9) not null default 0, MODIFY `transferred_qty` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `transfer_qty` decimal(21,9) not null default 0, MODIFY `basic_rate` decimal(21,9) not null default 0
+2025-03-31 18:05:56,450 WARNING database DDL Query made to DB:
+ALTER TABLE `tabStock Entry Detail` ADD INDEX `serial_and_batch_bundle_index`(`serial_and_batch_bundle`)
+2025-03-31 18:05:56,747 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSerial and Batch Bundle` MODIFY `total_amount` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `avg_rate` decimal(21,9) not null default 0, MODIFY `naming_series` varchar(140) default 'SABB-.########'
+2025-03-31 18:05:56,925 WARNING database DDL Query made to DB:
+ALTER TABLE `tabItem Default` ADD INDEX `default_warehouse_index`(`default_warehouse`)
+2025-03-31 18:05:57,013 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLanded Cost Taxes and Charges` MODIFY `exchange_rate` decimal(21,9) not null default 0, MODIFY `base_amount` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0
+2025-03-31 18:05:57,369 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDelivery Note` MODIFY `per_billed` decimal(21,9) not null default 0, MODIFY `total_commission` decimal(21,9) not null default 0, MODIFY `base_rounding_adjustment` decimal(21,9) not null default 0, MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `amount_eligible_for_commission` decimal(21,9) not null default 0, MODIFY `base_discount_amount` decimal(21,9) not null default 0, MODIFY `rounding_adjustment` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `per_installed` decimal(21,9) not null default 0, MODIFY `commission_rate` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `total_net_weight` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `additional_discount_percentage` decimal(21,9) not null default 0, MODIFY `plc_conversion_rate` decimal(21,9) not null default 0, MODIFY `base_net_total` decimal(21,9) not null default 0, MODIFY `rounded_total` decimal(21,9) not null default 0, MODIFY `per_returned` decimal(21,9) not null default 0, MODIFY `conversion_rate` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0, MODIFY `base_grand_total` decimal(21,9) not null default 0
+2025-03-31 18:05:57,674 WARNING database DDL Query made to DB:
+ALTER TABLE `tabItem` MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `over_billing_allowance` decimal(21,9) not null default 0, MODIFY `max_discount` decimal(21,9) not null default 0, MODIFY `total_projected_qty` decimal(21,9) not null default 0, MODIFY `last_purchase_rate` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `safety_stock` decimal(21,9) not null default 0, MODIFY `standard_rate` decimal(21,9) not null default 0, MODIFY `over_delivery_receipt_allowance` decimal(21,9) not null default 0, MODIFY `opening_stock` decimal(21,9) not null default 0
+2025-03-31 18:05:57,955 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIssue` MODIFY `avg_response_time` decimal(21,9), MODIFY `user_resolution_time` decimal(21,9), MODIFY `total_hold_time` decimal(21,9), MODIFY `resolution_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9)
+2025-03-31 18:05:58,086 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAsset Finance Book` MODIFY `rate_of_depreciation` decimal(21,9) not null default 0, MODIFY `value_after_depreciation` decimal(21,9) not null default 0, MODIFY `salvage_value_percentage` decimal(21,9) not null default 0
+2025-03-31 18:05:58,313 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAsset` MODIFY `opening_accumulated_depreciation` decimal(21,9) not null default 0, MODIFY `value_after_depreciation` decimal(21,9) not null default 0, MODIFY `gross_purchase_amount` decimal(21,9) not null default 0, MODIFY `additional_asset_cost` decimal(21,9) not null default 0, MODIFY `purchase_amount` decimal(21,9) not null default 0, MODIFY `total_asset_cost` decimal(21,9) not null default 0
+2025-03-31 18:05:58,451 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAsset Value Adjustment` MODIFY `difference_amount` decimal(21,9) not null default 0, MODIFY `current_asset_value` decimal(21,9) not null default 0, MODIFY `new_asset_value` decimal(21,9) not null default 0
+2025-03-31 18:05:58,583 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAsset Capitalization Stock Item` MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0
+2025-03-31 18:05:58,593 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAsset Capitalization Stock Item` ADD INDEX `creation`(`creation`)
+2025-03-31 18:05:58,752 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAsset Capitalization` MODIFY `asset_items_total` decimal(21,9) not null default 0, MODIFY `total_value` decimal(21,9) not null default 0, MODIFY `stock_items_total` decimal(21,9) not null default 0, MODIFY `target_incoming_rate` decimal(21,9) not null default 0, MODIFY `service_items_total` decimal(21,9) not null default 0
+2025-03-31 18:05:59,084 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSubcontracting Receipt` MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `per_returned` decimal(21,9) not null default 0, MODIFY `total_additional_costs` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
+2025-03-31 18:05:59,296 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSubcontracting Receipt Item` MODIFY `qty` decimal(21,9) not null default 0, MODIFY `rm_supp_cost` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `rejected_qty` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0
+2025-03-31 18:05:59,499 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSubcontracting Order` MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `total_additional_costs` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `per_received` decimal(21,9) not null default 0
+2025-03-31 18:05:59,625 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSubcontracting Order Service Item` MODIFY `qty` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0
+2025-03-31 18:05:59,777 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSubcontracting Order Item` MODIFY `amount` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0, MODIFY `subcontracting_conversion_factor` decimal(21,9) not null default 0, MODIFY `returned_qty` decimal(21,9) not null default 0, MODIFY `rm_cost_per_qty` decimal(21,9) not null default 0, MODIFY `service_cost_per_qty` decimal(21,9) not null default 0, MODIFY `received_qty` decimal(21,9) not null default 0
+2025-03-31 18:08:19,913 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 18:08:20,557 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 18:08:21,149 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 18:09:07,768 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Ticket Comment`
+2025-03-31 18:09:07,888 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Service Level Agreement`
+2025-03-31 18:09:07,924 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Team Member`
+2025-03-31 18:09:07,964 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Customer`
+2025-03-31 18:09:08,004 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD View`
+2025-03-31 18:09:08,044 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Organization`
+2025-03-31 18:09:08,080 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Service Day`
+2025-03-31 18:09:08,118 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Article`
+2025-03-31 18:09:08,151 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Organization Contact Item`
+2025-03-31 18:09:08,184 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Canned Response`
+2025-03-31 18:09:08,218 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Stopword`
+2025-03-31 18:09:08,251 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Ticket Priority`
+2025-03-31 18:09:08,292 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Action`
+2025-03-31 18:09:08,339 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Ticket Template`
+2025-03-31 18:09:08,372 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Ticket Template Field`
+2025-03-31 18:09:08,413 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Escalation Rule`
+2025-03-31 18:09:08,451 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Article Feedback`
+2025-03-31 18:09:08,484 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Preset Filter Item`
+2025-03-31 18:09:08,521 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Desk Account Request`
+2025-03-31 18:09:08,564 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Support Search Source`
+2025-03-31 18:09:08,604 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Pause Service Level Agreement On Status`
+2025-03-31 18:09:08,642 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Ticket Activity`
+2025-03-31 18:09:08,681 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Service Holiday List`
+2025-03-31 18:09:08,748 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Synonyms`
+2025-03-31 18:09:08,786 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Service Level Agreement Fulfilled On Status`
+2025-03-31 18:09:08,824 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Team`
+2025-03-31 18:09:08,859 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Holiday`
+2025-03-31 18:09:08,904 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Service Level Priority`
+2025-03-31 18:09:08,937 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Agent`
+2025-03-31 18:09:08,972 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Ticket Feedback Option`
+2025-03-31 18:09:09,014 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Notification`
+2025-03-31 18:09:09,051 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Article Category`
+2025-03-31 18:09:09,087 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Ticket Type`
+2025-03-31 18:09:09,119 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Portal Signup Request`
+2025-03-31 18:09:09,152 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Form Script`
+2025-03-31 18:09:09,244 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Ticket`
+2025-03-31 18:09:09,280 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Preset Filter`
+2025-03-31 18:09:09,316 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabHD Synonym`
+2025-03-31 18:09:52,748 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabLeave Period`
+2025-03-31 18:09:52,859 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabFull and Final Statement`
+2025-03-31 18:09:52,917 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabPWA Notification`
+2025-03-31 18:09:52,977 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabInterest`
+2025-03-31 18:09:53,028 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Onboarding Template`
+2025-03-31 18:09:53,097 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSalary Withholding`
+2025-03-31 18:09:53,168 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabLeave Policy`
+2025-03-31 18:09:53,250 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Promotion`
+2025-03-31 18:09:53,326 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabTraining Result`
+2025-03-31 18:09:53,384 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Referral`
+2025-03-31 18:09:53,444 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabPayroll Period Date`
+2025-03-31 18:09:53,493 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabExpense Claim Type`
+2025-03-31 18:09:53,541 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Tax Exemption Category`
+2025-03-31 18:09:53,592 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabFull and Final Asset`
+2025-03-31 18:09:53,661 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabShift Assignment`
+2025-03-31 18:09:53,748 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabGoal`
+2025-03-31 18:09:53,797 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabStaffing Plan`
+2025-03-31 18:09:53,864 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabShift Schedule`
+2025-03-31 18:09:53,930 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabVehicle Service Item`
+2025-03-31 18:09:53,993 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabLeave Block List`
+2025-03-31 18:09:54,037 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabVehicle Service`
+2025-03-31 18:09:54,099 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Benefit Application`
+2025-03-31 18:09:54,180 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAppraisal KRA`
+2025-03-31 18:09:54,239 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabTraining Feedback`
+2025-03-31 18:09:54,308 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Tax Exemption Sub Category`
+2025-03-31 18:09:54,356 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Skill`
+2025-03-31 18:09:54,411 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabGratuity Rule`
+2025-03-31 18:09:54,476 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Feedback Criteria`
+2025-03-31 18:09:54,525 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabInterview Detail`
+2025-03-31 18:09:54,576 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Transfer`
+2025-03-31 18:09:54,623 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabLeave Block List Date`
+2025-03-31 18:09:54,668 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Property History`
+2025-03-31 18:09:54,711 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Boarding Activity`
+2025-03-31 18:09:54,758 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabDaily Work Summary Group User`
+2025-03-31 18:09:54,812 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabLeave Policy Assignment`
+2025-03-31 18:09:54,896 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabJob Offer Term`
+2025-03-31 18:09:54,991 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabExpense Taxes and Charges`
+2025-03-31 18:09:55,048 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAdditional Salary`
+2025-03-31 18:09:55,101 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabLeave Ledger Entry`
+2025-03-31 18:09:55,175 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Feedback Rating`
+2025-03-31 18:09:55,229 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAppraisal Template Goal`
+2025-03-31 18:09:55,296 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabInterview Type`
+2025-03-31 18:09:55,359 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSalary Detail`
+2025-03-31 18:09:55,427 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAppointment Letter content`
+2025-03-31 18:09:55,468 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabIncome Tax Slab`
+2025-03-31 18:09:55,512 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Benefit Claim`
+2025-03-31 18:09:55,547 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSalary Component Account`
+2025-03-31 18:09:55,578 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabLeave Block List Allow`
+2025-03-31 18:09:55,613 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAppraisal Goal`
+2025-03-31 18:09:55,652 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSalary Structure Assignment`
+2025-03-31 18:09:55,687 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Incentive`
+2025-03-31 18:09:55,761 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSalary Slip`
+2025-03-31 18:09:55,792 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabDesignation Skill`
+2025-03-31 18:09:55,824 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabPayroll Period`
+2025-03-31 18:09:55,861 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabInterview Round`
+2025-03-31 18:09:55,917 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabJob Opening`
+2025-03-31 18:09:55,965 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabTravel Request`
+2025-03-31 18:09:55,996 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabGrievance Type`
+2025-03-31 18:09:56,028 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployment Type`
+2025-03-31 18:09:56,060 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabOffer Term`
+2025-03-31 18:09:56,107 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSalary Structure`
+2025-03-31 18:09:56,140 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSalary Slip Timesheet`
+2025-03-31 18:09:56,178 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Other Income`
+2025-03-31 18:09:56,212 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabTaxable Salary Slab`
+2025-03-31 18:09:56,244 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabKRA`
+2025-03-31 18:09:56,276 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAppointment Letter Template`
+2025-03-31 18:09:56,309 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSalary Withholding Cycle`
+2025-03-31 18:09:56,349 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabDaily Work Summary Group`
+2025-03-31 18:09:56,388 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabInterview`
+2025-03-31 18:09:56,425 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Tax Exemption Declaration Category`
+2025-03-31 18:09:56,464 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSalary Slip Leave`
+2025-03-31 18:09:56,524 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabExpense Claim`
+2025-03-31 18:09:56,568 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabTravel Itinerary`
+2025-03-31 18:09:56,612 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabJob Offer`
+2025-03-31 18:09:56,647 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Health Insurance`
+2025-03-31 18:09:56,692 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Separation Template`
+2025-03-31 18:09:56,732 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabTravel Request Costing`
+2025-03-31 18:09:56,765 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSkill Assessment`
+2025-03-31 18:09:56,805 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabExpense Claim Detail`
+2025-03-31 18:09:56,839 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSkill`
+2025-03-31 18:09:56,875 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabIdentification Document Type`
+2025-03-31 18:09:56,920 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Separation`
+2025-03-31 18:09:56,964 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Performance Feedback`
+2025-03-31 18:09:57,013 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabLeave Application`
+2025-03-31 18:09:57,061 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAppraisal`
+2025-03-31 18:09:57,092 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabDaily Work Summary`
+2025-03-31 18:09:57,123 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabGratuity Applicable Component`
+2025-03-31 18:09:57,164 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabCompensatory Leave Request`
+2025-03-31 18:09:57,196 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabGratuity Rule Slab`
+2025-03-31 18:09:57,231 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Grade`
+2025-03-31 18:09:57,264 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Tax Exemption Proof Submission Detail`
+2025-03-31 18:09:57,307 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Advance`
+2025-03-31 18:09:57,344 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabTraining Program`
+2025-03-31 18:09:57,391 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabLeave Type`
+2025-03-31 18:09:57,424 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAppraisee`
+2025-03-31 18:09:57,456 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Benefit Application Detail`
+2025-03-31 18:09:57,504 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAppraisal Cycle`
+2025-03-31 18:09:57,544 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabVehicle Log`
+2025-03-31 18:09:57,579 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Onboarding`
+2025-03-31 18:09:57,613 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabJob Applicant Source`
+2025-03-31 18:09:57,652 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Tax Exemption Declaration`
+2025-03-31 18:09:57,687 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSalary Slip Loan`
+2025-03-31 18:09:57,733 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabExit Interview`
+2025-03-31 18:09:57,768 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabTraining Result Employee`
+2025-03-31 18:09:57,803 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabIncome Tax Slab Other Charges`
+2025-03-31 18:09:57,851 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabPayroll Entry`
+2025-03-31 18:09:57,892 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabRetention Bonus`
+2025-03-31 18:09:57,930 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAttendance Request`
+2025-03-31 18:09:57,972 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Grievance`
+2025-03-31 18:09:58,008 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAppointment Letter`
+2025-03-31 18:09:58,040 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabJob Offer Term Template`
+2025-03-31 18:09:58,079 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabExpense Claim Account`
+2025-03-31 18:09:58,120 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabLeave Encashment`
+2025-03-31 18:09:58,164 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabLeave Allocation`
+2025-03-31 18:09:58,193 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabInterviewer`
+2025-03-31 18:09:58,239 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabShift Type`
+2025-03-31 18:09:58,271 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabPayroll Employee Detail`
+2025-03-31 18:09:58,307 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAttendance`
+2025-03-31 18:09:58,344 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabTraining Event Employee`
+2025-03-31 18:09:58,385 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Tax Exemption Proof Submission`
+2025-03-31 18:09:58,420 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Cost Center`
+2025-03-31 18:09:58,453 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabFull and Final Outstanding Statement`
+2025-03-31 18:09:58,489 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabAppraisal Template`
+2025-03-31 18:09:58,521 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabShift Location`
+2025-03-31 18:09:58,555 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Skill Map`
+2025-03-31 18:09:58,592 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabGratuity`
+2025-03-31 18:09:58,626 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabExpense Claim Advance`
+2025-03-31 18:09:58,659 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabPurpose of Travel`
+2025-03-31 18:09:58,691 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabStaffing Plan Detail`
+2025-03-31 18:09:58,724 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabExpected Skill Set`
+2025-03-31 18:09:58,763 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabShift Schedule Assignment`
+2025-03-31 18:09:58,804 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabTraining Event`
+2025-03-31 18:09:58,841 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabShift Request`
+2025-03-31 18:09:58,884 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabSalary Component`
+2025-03-31 18:09:58,929 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabJob Requisition`
+2025-03-31 18:09:58,961 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabLeave Policy Detail`
+2025-03-31 18:09:59,005 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabInterview Feedback`
+2025-03-31 18:09:59,033 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Training`
+2025-03-31 18:09:59,065 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabDepartment Approver`
+2025-03-31 18:09:59,108 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabJob Applicant`
+2025-03-31 18:09:59,152 WARNING database DDL Query made to DB:
+DROP TABLE IF EXISTS `tabEmployee Checkin`
+2025-03-31 18:11:01,097 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 18:12:07,205 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 18:15:03,662 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-03-31 18:15:04,287 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-03-31 18:15:04,917 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-03-31 18:22:04,888 WARNING database DDL Query made to DB:
+create table `tabLeave Policy Assignment` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`employee` varchar(140),
+`employee_name` varchar(140),
+`company` varchar(140),
+`leave_policy` varchar(140),
+`carry_forward` int(1) not null default 0,
+`assignment_based_on` varchar(140),
+`leave_period` varchar(140),
+`effective_from` date,
+`effective_to` date,
+`leaves_allocated` int(1) not null default 0,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:04,999 WARNING database DDL Query made to DB:
+create table `tabExpense Claim Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`expense_date` date,
+`expense_type` varchar(140),
+`default_account` varchar(140),
+`description` longtext,
+`amount` decimal(21,9) not null default 0,
+`sanctioned_amount` decimal(21,9) not null default 0,
+`cost_center` varchar(140),
+`project` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:05,076 WARNING database DDL Query made to DB:
+create table `tabEmployee Separation` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`employee` varchar(140),
+`employee_name` varchar(140),
+`department` varchar(140),
+`designation` varchar(140),
+`employee_grade` varchar(140),
+`company` varchar(140),
+`boarding_status` varchar(140) default 'Pending',
+`resignation_letter_date` date,
+`boarding_begins_on` date,
+`project` varchar(140),
+`employee_separation_template` varchar(140),
+`notify_users_by_email` int(1) not null default 0,
+`exit_interview` longtext,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:05,155 WARNING database DDL Query made to DB:
+create table `tabEmployee Feedback Criteria` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`criteria` varchar(140) unique,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:05,262 WARNING database DDL Query made to DB:
+create table `tabInterview` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`interview_round` varchar(140),
+`job_applicant` varchar(140),
+`job_opening` varchar(140),
+`designation` varchar(140),
+`resume_link` varchar(140),
+`status` varchar(140) default 'Pending',
+`scheduled_on` date,
+`from_time` time(6),
+`to_time` time(6),
+`expected_average_rating` decimal(3,2),
+`average_rating` decimal(3,2),
+`interview_summary` text,
+`reminded` int(1) not null default 0,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:05,356 WARNING database DDL Query made to DB:
+create table `tabPurpose of Travel` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`purpose_of_travel` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:05,438 WARNING database DDL Query made to DB:
+create table `tabGrievance Type` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`description` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:05,532 WARNING database DDL Query made to DB:
+create table `tabEmployee Boarding Activity` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`activity_name` varchar(140),
+`user` varchar(140),
+`role` varchar(140),
+`begin_on` int(11) not null default 0,
+`duration` int(11) not null default 0,
+`task` varchar(140),
+`task_weight` decimal(21,9) not null default 0,
+`required_for_employee_creation` int(1) not null default 0,
+`description` longtext,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:05,608 WARNING database DDL Query made to DB:
+create table `tabStaffing Plan Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`designation` varchar(140),
+`vacancies` int(11) not null default 0,
+`estimated_cost_per_position` decimal(21,9) not null default 0,
+`total_estimated_cost` decimal(21,9) not null default 0,
+`current_count` int(11) not null default 0,
+`current_openings` int(11) not null default 0,
+`number_of_positions` int(11) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:05,678 WARNING database DDL Query made to DB:
+create table `tabLeave Block List Date` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`block_date` date,
+`reason` text,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:05,756 WARNING database DDL Query made to DB:
+create table `tabInterview Feedback` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`interview` varchar(140),
+`interview_round` varchar(140),
+`job_applicant` varchar(140),
+`interviewer` varchar(140),
+`result` varchar(140),
+`average_rating` decimal(3,2),
+`feedback` text,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:05,838 WARNING database DDL Query made to DB:
+create table `tabTravel Request Costing` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`expense_type` varchar(140),
+`sponsored_amount` decimal(21,9) not null default 0,
+`funded_amount` decimal(21,9) not null default 0,
+`total_amount` decimal(21,9) not null default 0,
+`comments` text,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:05,916 WARNING database DDL Query made to DB:
+create table `tabTraining Program` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`training_program` varchar(140),
+`status` varchar(140) default 'Scheduled',
+`company` varchar(140),
+`trainer_name` varchar(140),
+`trainer_email` varchar(140),
+`supplier` varchar(140),
+`contact_number` varchar(140),
+`description` longtext,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:05,988 WARNING database DDL Query made to DB:
+create table `tabDaily Work Summary Group` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`enabled` int(1) not null default 1,
+`send_emails_at` varchar(140),
+`holiday_list` varchar(140),
+`subject` varchar(140) default 'What did you work on today?',
+`message` longtext default '<p>Please share what did you do today. If you reply by midnight, your response will be recorded!</p>',
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:06,078 WARNING database DDL Query made to DB:
+create table `tabLeave Block List` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`leave_block_list_name` varchar(140) unique,
+`company` varchar(140),
+`applies_to_all_departments` int(1) not null default 0,
+`leave_type` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:06,173 WARNING database DDL Query made to DB:
+create table `tabJob Applicant` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`applicant_name` varchar(140),
+`email_id` varchar(140),
+`phone_number` varchar(140),
+`country` varchar(140),
+`job_title` varchar(140),
+`designation` varchar(140),
+`status` varchar(140),
+`source` varchar(140),
+`source_name` varchar(140),
+`employee_referral` varchar(140),
+`applicant_rating` decimal(3,2),
+`notes` varchar(140),
+`cover_letter` text,
+`resume_attachment` text,
+`resume_link` varchar(140),
+`currency` varchar(140),
+`lower_range` decimal(21,9) not null default 0,
+`upper_range` decimal(21,9) not null default 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `job_title`(`job_title`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:06,245 WARNING database DDL Query made to DB:
+create table `tabSkill` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`skill_name` varchar(140) unique,
+`description` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:06,482 WARNING database DDL Query made to DB:
+create table `tabLeave Application` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`employee` varchar(140),
+`employee_name` varchar(140),
+`leave_type` varchar(140),
+`company` varchar(140),
+`department` varchar(140),
+`from_date` date,
+`to_date` date,
+`half_day` int(1) not null default 0,
+`half_day_date` date,
+`total_leave_days` decimal(21,9) not null default 0,
+`description` text,
+`leave_balance` decimal(21,9) not null default 0,
+`leave_approver` varchar(140),
+`leave_approver_name` varchar(140),
+`follow_via_email` int(1) not null default 1,
+`posting_date` date,
+`status` varchar(140) default 'Open',
+`salary_slip` varchar(140),
+`color` varchar(140),
+`letter_head` varchar(140),
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `employee`(`employee`),
+index `leave_type`(`leave_type`),
+index `from_date`(`from_date`),
+index `to_date`(`to_date`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:06,563 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLeave Application`
+				ADD INDEX IF NOT EXISTS `employee_from_date_to_date_index`(employee, from_date, to_date)
+2025-03-31 18:22:06,611 WARNING database DDL Query made to DB:
+create table `tabExpense Claim Advance` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`employee_advance` varchar(140),
+`posting_date` date,
+`advance_paid` decimal(21,9) not null default 0,
+`unclaimed_amount` decimal(21,9) not null default 0,
+`return_amount` decimal(21,9) not null default 0,
+`allocated_amount` decimal(21,9) not null default 0,
+`advance_account` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:06,678 WARNING database DDL Query made to DB:
+create table `tabSkill Assessment` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`skill` varchar(140),
+`rating` decimal(3,2),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:06,747 WARNING database DDL Query made to DB:
+create table `tabAppointment Letter content` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`title` varchar(140),
+`description` longtext,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:06,817 WARNING database DDL Query made to DB:
+create table `tabAppraisee` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`employee` varchar(140),
+`employee_name` varchar(140),
+`appraisal_template` varchar(140),
+`department` varchar(140),
+`designation` varchar(140),
+`branch` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:06,885 WARNING database DDL Query made to DB:
+create table `tabEmployee Training` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`training` varchar(140),
+`training_date` date,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-03-31 18:22:06,975 WARNING database DDL Query made to DB:
+create table `tabLeave Allocation` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`employee` varchar(140),
+`employee_name` varchar(140),
+`department` varchar(140),
+`company` varchar(140),
+`leave_type` varchar(140),
+`from_date` date,
+`to_date` date,
+`new_leaves_allocated` decimal(21,9) not null default 0,
+`carry_forward` int(1) not null default 0,
+`unused_leaves` decimal(21,9) not null default 0,
+`total_leaves_allocated` decimal(21,9) not null default 0,
+`total_leaves_encashed` decimal(21,9) not null default 0,
+`compensatory_request` varchar(140),
+`leave_period` varchar(140),
+`leave_policy` varchar(140),
+`leave_policy_assignment` varchar(140),
+`carry_forwarded_leaves_count` decimal(21,9) not null default 0,
+`expired` int(1) not null default 0,
+`amended_from` varchar(140),
+`description` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `employee`(`employee`),
+index `employee_name`(`employee_name`),
+index `leave_type`(`leave_type`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci

@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@redis/client": "^1.6.0",
+    "@vue/compiler-sfc": "^3.5.13",
+    "chalk": "^5.4.1",
+    "esbuild": "^0.25.1",
+    "esbuild-plugin-vue3": "^0.4.2",
+    "fast-glob": "^3.3.3",
+    "socket.io": "^4.8.1",
+    "yargs": "^17.7.2"
+  }
+}

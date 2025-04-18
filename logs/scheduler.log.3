@@ -1,0 +1,1483 @@
+2025-03-29 18:36:23,671 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helpdesk'
+2025-03-29 18:37:23,692 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helpdesk'
+2025-03-29 18:38:23,710 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helpdesk'
+2025-03-29 18:39:23,730 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helpdesk'
+2025-03-29 18:40:23,748 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helpdesk'
+2025-03-31 12:15:42,945 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 1463, in get_connection
+    if connection.can_read():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 861, in can_read
+    return self._parser.can_read(timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 444, in can_read
+    return self.read_from_socket(timeout=timeout, raise_on_timeout=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 455, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 1002, in _connect
+    raise err
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 990, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 78, in enqueue_events_for_site
+    enqueue_events(site=site)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 96, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 72, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 541, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 546, in get_job_status
+    job = get_job(job_id)
+          ^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 553, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/rq/job.py", line 591, in fetch
+    job.refresh()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/rq/job.py", line 989, in refresh
+    data = self.connection.hgetall(self.key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/commands/core.py", line 4887, in hgetall
+    return self.execute_command("HGETALL", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/client.py", line 1266, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 1467, in get_connection
+    connection.connect()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-03-31 12:16:43,046 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 1002, in _connect
+    raise err
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 990, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 78, in enqueue_events_for_site
+    enqueue_events(site=site)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 96, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 72, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 541, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 546, in get_job_status
+    job = get_job(job_id)
+          ^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 553, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/rq/job.py", line 591, in fetch
+    job.refresh()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/rq/job.py", line 989, in refresh
+    data = self.connection.hgetall(self.key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/commands/core.py", line 4887, in hgetall
+    return self.execute_command("HGETALL", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/client.py", line 1266, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 1457, in get_connection
+    connection.connect()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-03-31 12:17:43,138 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 1002, in _connect
+    raise err
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 990, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 78, in enqueue_events_for_site
+    enqueue_events(site=site)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 96, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 72, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 541, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 546, in get_job_status
+    job = get_job(job_id)
+          ^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 553, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/rq/job.py", line 591, in fetch
+    job.refresh()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/rq/job.py", line 989, in refresh
+    data = self.connection.hgetall(self.key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/commands/core.py", line 4887, in hgetall
+    return self.execute_command("HGETALL", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/client.py", line 1266, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 1457, in get_connection
+    connection.connect()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-03-31 12:18:43,231 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 1002, in _connect
+    raise err
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 990, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 78, in enqueue_events_for_site
+    enqueue_events(site=site)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 96, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 72, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 541, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 546, in get_job_status
+    job = get_job(job_id)
+          ^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 553, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/rq/job.py", line 591, in fetch
+    job.refresh()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/rq/job.py", line 989, in refresh
+    data = self.connection.hgetall(self.key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/commands/core.py", line 4887, in hgetall
+    return self.execute_command("HGETALL", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/client.py", line 1266, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 1457, in get_connection
+    connection.connect()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/env/lib/python3.11/site-packages/redis/connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-03-31 13:03:57,743 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms.hooks'
+2025-03-31 13:04:48,443 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1616, in _load_app_hooks
+    print(f'Could not find app "{app}": \n{e}')
+BrokenPipeError: [Errno 32] Broken pipe
+2025-03-31 13:04:57,757 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms.hooks'
+2025-03-31 13:05:48,464 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1616, in _load_app_hooks
+    print(f'Could not find app "{app}": \n{e}')
+BrokenPipeError: [Errno 32] Broken pipe
+2025-03-31 13:05:57,771 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms.hooks'
+2025-03-31 13:06:48,483 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1616, in _load_app_hooks
+    print(f'Could not find app "{app}": \n{e}')
+BrokenPipeError: [Errno 32] Broken pipe
+2025-03-31 13:06:57,788 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms.hooks'
+2025-03-31 13:07:48,496 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1616, in _load_app_hooks
+    print(f'Could not find app "{app}": \n{e}')
+BrokenPipeError: [Errno 32] Broken pipe
+2025-03-31 13:07:57,801 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helpdesk.hooks'
+2025-03-31 13:08:48,511 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'hrms'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1616, in _load_app_hooks
+    print(f'Could not find app "{app}": \n{e}')
+BrokenPipeError: [Errno 32] Broken pipe
+2025-03-31 13:08:57,814 ERROR scheduler Exception in Enqueue Events for Site bizproo.com
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 55, in wrapper
+    return frappe.local.request_cache[func][args_key]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/database/database.py", line 844, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1360, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/document.py", line 199, in load_from_db
+    self.set(df.fieldname, children)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 236, in set
+    self.extend(key, value)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 303, in extend
+    self.append(key, v)
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 262, in append
+    d = self._init_child(value, key)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 317, in _init_child
+    value = get_controller(doctype)(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1643, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 100, in get_value
+    val = generator()
+          ^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return_val = func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1610, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/__init__.py", line 1476, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'helpdesk.hooks'
