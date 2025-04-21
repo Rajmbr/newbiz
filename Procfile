@@ -12,7 +12,8 @@ socketio: /home/mbr-python/.nvm/versions/node/v18.20.7/bin/node apps/frappe/sock
 watch: bench watch
 
 
-schedule: bench schedule
+schedule: while true; do bench schedule; sleep 60; done
+
 
 worker:  bench worker 1>> logs/worker.log 2>> logs/worker.error.log
 
