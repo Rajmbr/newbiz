@@ -1480,3 +1480,21 @@ To avoid seeing this warning, set shallow_clone to false in your common_site_con
 2025-04-18 15:05:33,628 INFO /home/mbr-python/.local/bin/bench serve --port 8000
 2025-04-18 15:05:33,628 INFO /home/mbr-python/.local/bin/bench watch
 2025-04-18 15:05:33,775 INFO /home/mbr-python/.local/bin/bench schedule
+2025-04-18 18:00:01,478 INFO /home/mbr-python/.local/bin/bench --verbose --site all backup
+2025-04-18 18:05:41,351 INFO /home/mbr-python/.local/bin/bench start
+2025-04-18 18:05:41,589 INFO /home/mbr-python/.local/bin/bench watch
+2025-04-18 18:05:41,681 INFO /home/mbr-python/.local/bin/bench serve --port 8000
+2025-04-18 18:05:41,690 INFO /home/mbr-python/.local/bin/bench worker
+2025-04-18 18:05:41,711 INFO /home/mbr-python/.local/bin/bench schedule
+2025-04-21 10:38:59,118 INFO /home/mbr-python/.local/bin/bench strat
+2025-04-21 10:39:25,007 INFO /home/mbr-python/.local/bin/bench start
+2025-04-21 10:39:25,261 INFO /home/mbr-python/.local/bin/bench schedule
+2025-04-21 10:39:25,275 INFO /home/mbr-python/.local/bin/bench worker
+2025-04-21 10:39:25,278 INFO /home/mbr-python/.local/bin/bench watch
+2025-04-21 10:39:25,335 INFO /home/mbr-python/.local/bin/bench serve --port 8000
+2025-04-21 12:00:01,157 INFO /home/mbr-python/.local/bin/bench --verbose --site all backup
+2025-04-21 12:04:53,069 INFO /home/mbr-python/.local/bin/bench start
+2025-04-21 12:04:53,277 INFO /home/mbr-python/.local/bin/bench watch
+2025-04-21 12:04:53,283 INFO /home/mbr-python/.local/bin/bench serve --port 8000
+2025-04-21 12:04:53,332 INFO /home/mbr-python/.local/bin/bench worker
+2025-04-21 12:04:53,346 INFO /home/mbr-python/.local/bin/bench schedule
