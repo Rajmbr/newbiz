@@ -961,3 +961,153 @@ Form Dict: {}
 2025-03-31 19:01:29,894 ERROR frappe New Exception collected in error log
 Site: bizproo.com
 Form Dict: {'doctype': 'Workspace Settings', 'cmd': 'frappe.client.get'}
+2025-04-21 16:37:22,583 ERROR frappe Could not take error snapshot: No module named 'frappe.utils.sentry'
+Site: bizproo.com
+Form Dict: {'app_path': 'payables'}
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 20, in get_response
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 94, in get_html
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 146, in set_pymodule
+AttributeError: 'TemplatePage' object has no attribute 'app_path'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 23, in get_response
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 37, in handle_exception
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 94, in get_html
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 146, in set_pymodule
+AttributeError: 'ErrorPage' object has no attribute 'app_path'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/error.py", line 39, in log_error
+ModuleNotFoundError: No module named 'frappe.utils.sentry'
+2025-04-21 16:37:24,889 ERROR frappe Could not take error snapshot: No module named 'frappe.utils.sentry'
+Site: bizproo.com
+Form Dict: {'app_path': 'payables'}
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 20, in get_response
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 94, in get_html
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 146, in set_pymodule
+AttributeError: 'TemplatePage' object has no attribute 'app_path'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 23, in get_response
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 37, in handle_exception
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 94, in get_html
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 146, in set_pymodule
+AttributeError: 'ErrorPage' object has no attribute 'app_path'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/error.py", line 39, in log_error
+ModuleNotFoundError: No module named 'frappe.utils.sentry'
+2025-04-21 16:37:25,940 ERROR frappe Could not take error snapshot: No module named 'frappe.utils.sentry'
+Site: bizproo.com
+Form Dict: {'app_path': 'payables'}
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 20, in get_response
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 94, in get_html
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 146, in set_pymodule
+AttributeError: 'TemplatePage' object has no attribute 'app_path'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 23, in get_response
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 37, in handle_exception
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 94, in get_html
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 146, in set_pymodule
+AttributeError: 'ErrorPage' object has no attribute 'app_path'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/error.py", line 39, in log_error
+ModuleNotFoundError: No module named 'frappe.utils.sentry'
+2025-04-21 16:37:26,214 ERROR frappe Could not take error snapshot: No module named 'frappe.utils.sentry'
+Site: bizproo.com
+Form Dict: {'app_path': 'payables'}
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 20, in get_response
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 94, in get_html
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 146, in set_pymodule
+AttributeError: 'TemplatePage' object has no attribute 'app_path'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 23, in get_response
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 37, in handle_exception
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 94, in get_html
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 146, in set_pymodule
+AttributeError: 'ErrorPage' object has no attribute 'app_path'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/error.py", line 39, in log_error
+ModuleNotFoundError: No module named 'frappe.utils.sentry'
+2025-04-21 16:37:26,948 ERROR frappe Could not take error snapshot: No module named 'frappe.utils.sentry'
+Site: bizproo.com
+Form Dict: {'app_path': 'payables'}
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 20, in get_response
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 94, in get_html
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 146, in set_pymodule
+AttributeError: 'TemplatePage' object has no attribute 'app_path'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 23, in get_response
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/serve.py", line 37, in handle_exception
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 94, in get_html
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 146, in set_pymodule
+AttributeError: 'ErrorPage' object has no attribute 'app_path'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+  File "/home/mbr-python/Desktop/bizproo/frappe-bench/apps/frappe/frappe/utils/error.py", line 39, in log_error
+ModuleNotFoundError: No module named 'frappe.utils.sentry'

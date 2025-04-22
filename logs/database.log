@@ -2760,3 +2760,69 @@ alter table `tabDocType` add column if not exists migration_hash varchar(140)
 ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
 2025-04-17 17:57:24,440 WARNING database DDL Query made to DB:
 ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-04-21 17:24:28,379 WARNING database DDL Query made to DB:
+DROP USER IF EXISTS '_e30c25f20b33a4e4'@'localhost'
+2025-04-21 17:24:34,571 WARNING database DDL Query made to DB:
+DROP DATABASE IF EXISTS `_e30c25f20b33a4e4`
+2025-04-21 17:24:34,572 WARNING database DDL Query made to DB:
+CREATE USER '_e30c25f20b33a4e4'@'localhost' IDENTIFIED BY 'U5r0xFvbABjiz0yB'
+2025-04-21 17:24:34,590 WARNING database DDL Query made to DB:
+CREATE DATABASE `_e30c25f20b33a4e4` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2025-04-21 17:24:52,197 WARNING database DDL Query made to DB:
+create table if not exists `__Auth` (
+				`doctype` VARCHAR(140) NOT NULL,
+				`name` VARCHAR(255) NOT NULL,
+				`fieldname` VARCHAR(140) NOT NULL,
+				`password` TEXT NOT NULL,
+				`encrypted` INT(1) NOT NULL DEFAULT 0,
+				PRIMARY KEY (`doctype`, `name`, `fieldname`)
+			) ENGINE=InnoDB ROW_FORMAT=DYNAMIC CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+2025-04-21 17:24:52,204 WARNING database DDL Query made to DB:
+create table if not exists __UserSettings (
+			`user` VARCHAR(180) NOT NULL,
+			`doctype` VARCHAR(180) NOT NULL,
+			`data` TEXT,
+			UNIQUE(user, doctype)
+			) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+2025-04-21 18:04:22,675 WARNING database DDL Query made to DB:
+DROP USER IF EXISTS '_e30c25f20b33a4e4'@'localhost'
+2025-04-21 18:04:28,824 WARNING database DDL Query made to DB:
+DROP DATABASE IF EXISTS `_e30c25f20b33a4e4`
+2025-04-21 18:04:28,825 WARNING database DDL Query made to DB:
+CREATE USER '_e30c25f20b33a4e4'@'localhost' IDENTIFIED BY 'U5r0xFvbABjiz0yB'
+2025-04-21 18:04:28,826 WARNING database DDL Query made to DB:
+CREATE DATABASE `_e30c25f20b33a4e4` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2025-04-21 18:04:46,507 WARNING database DDL Query made to DB:
+create table if not exists `__Auth` (
+				`doctype` VARCHAR(140) NOT NULL,
+				`name` VARCHAR(255) NOT NULL,
+				`fieldname` VARCHAR(140) NOT NULL,
+				`password` TEXT NOT NULL,
+				`encrypted` INT(1) NOT NULL DEFAULT 0,
+				PRIMARY KEY (`doctype`, `name`, `fieldname`)
+			) ENGINE=InnoDB ROW_FORMAT=DYNAMIC CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+2025-04-21 18:04:46,513 WARNING database DDL Query made to DB:
+create table if not exists __UserSettings (
+			`user` VARCHAR(180) NOT NULL,
+			`doctype` VARCHAR(180) NOT NULL,
+			`data` TEXT,
+			UNIQUE(user, doctype)
+			) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+2025-04-21 18:05:34,093 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-04-21 18:05:34,813 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-04-21 18:05:35,581 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-04-22 12:23:17,109 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-04-22 12:23:17,739 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-04-22 12:23:18,416 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-04-22 12:23:30,756 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-04-22 12:23:31,443 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-04-22 12:23:32,113 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)

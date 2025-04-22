@@ -310,3 +310,15 @@ Backup Summary for bizproo.com at 2025-04-21 12:00:03.996967
 Config  : ./bizproo.com/private/backups/20250421_120001-bizproo_com-site_config_backup.json 183.0B
 Database: ./bizproo.com/private/backups/20250421_120001-bizproo_com-database.sql.gz         1.8MiB
 Backup for Site bizproo.com has been successfully completed
+set -o pipefail; /usr/bin/mysqldump --user=_e30c25f20b33a4e4 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _e30c25f20b33a4e4 | /usr/bin/gzip >> ./bizproo.com/private/backups/20250421_180002-bizproo_com-database.sql.gz
+
+Backup Summary for bizproo.com at 2025-04-21 18:00:04.570219
+Config  : ./bizproo.com/private/backups/20250421_180002-bizproo_com-site_config_backup.json 183.0B
+Database: ./bizproo.com/private/backups/20250421_180002-bizproo_com-database.sql.gz         1.8MiB
+Backup for Site bizproo.com has been successfully completed
+set -o pipefail; /usr/bin/mysqldump --user=_e30c25f20b33a4e4 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _e30c25f20b33a4e4 | /usr/bin/gzip >> ./bizproo.com/private/backups/20250422_120002-bizproo_com-database.sql.gz
+
+Backup Summary for bizproo.com at 2025-04-22 12:00:06.119011
+Config  : ./bizproo.com/private/backups/20250422_120002-bizproo_com-site_config_backup.json 183.0B
+Database: ./bizproo.com/private/backups/20250422_120002-bizproo_com-database.sql.gz         1.8MiB
+Backup for Site bizproo.com has been successfully completed
